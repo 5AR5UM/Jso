@@ -64,7 +64,8 @@ def pastebin(jso):
 		print(C+'IP Anda Telah Di Blokir Pastebin')
 		print
 		print(C+'NOTE'+W+' :  Limit Create Hanya 10 X / 24 Jam.\n\tSekarang Anda Kunjungi Url Pastebin\n\tJika IP Anda Di Blokir Silahkan\n\tMatikan Internet Anda Dan Sambungkan Kembali *_*')
-		
+		sys.exit()
+	
 	else:
 		pass
 		
