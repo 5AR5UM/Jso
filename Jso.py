@@ -17,6 +17,13 @@ C = '\033[1;36m'
 W = '\033[1;37m'
 A = '\033[90m'
 
+if platform.system() != 'Linux':
+	print('Kode Ini Hanya Dapat Di Jalankan Di Platform Linux *_*')
+	sys.exit()
+	
+else:
+	pass
+
 try:
 	import requests
 	from requests.exceptions import ConnectionError
@@ -32,12 +39,6 @@ except:
 	sleep(3)
 	os.system('python2 '+__file__)
 	
-if platform.system() != 'Linux':
-	print('Kode Ini Hanya Dapat Di Jalankan Di Platform Linux *_*')
-	sys.exit()
-	
-else:
-	pass
 	
 os.system('clear')
 
