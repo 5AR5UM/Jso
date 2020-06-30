@@ -56,9 +56,7 @@ def banner():
                 '''+W+'Creator : ./Fukur0\n\t\tYT : Jejak Cyber')
 
 def pastebin(jso):
-	agent = open('agent.txt','r').readlines()
-	agents = random.choice(agent)
-	get = requests.get('http://pastebin.com', headers = {'User-Agent' : str(agents).replace('\r','').replace('\n','')})
+	get = requests.get('http://pastebin.com')
 	
 	if 'blocked' in get.text or get.status_code != 200:
 		print
@@ -71,7 +69,6 @@ def pastebin(jso):
 		pass
 		
 	csrf_token = re.findall(r'\<input\ type\=\"hidden\" name\=\"csrf_token_post\" value\=\"(.*?)\">', get.text)
-	
 	data = {
 	'csrf_token_post' : str(csrf_token[0]), 
 	'submit_hidden' : 'submit_hidden',
