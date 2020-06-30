@@ -79,7 +79,7 @@ def pastebin(jso):
 	'paste_name' : ''
 	} 
 	
-	send = requests.post('https://pastebin.com/post.php', data = data, headers = {'User-Agent' : agents.replace('\r','').replace('\n','')})
+	send = requests.post('https://pastebin.com/post.php', data = data)
 	print
 	print(C+'Url'+W+' : '+ str(send.url))
 	print(C+'Script Jso'+W+' : <script type="text/javascript" src="https://pastebin.com/raw/'+ str(send.url.split('/')[3] +'"></script>'))
